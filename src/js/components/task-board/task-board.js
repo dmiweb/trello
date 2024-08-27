@@ -249,7 +249,7 @@ export default class TaskBoard {
 
     if (
       belowElement.classList.contains("task-column__add-task-btn") ||
-      belowElement.classList.contains("form-add-task")
+      belowElement.classList.contains("form-add-task__text")
     ) {
       if (document.querySelector(".dragged-shadow"))
         document.querySelector(".dragged-shadow").remove();
