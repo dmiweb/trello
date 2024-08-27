@@ -1,0 +1,55 @@
+.form-add-task__text {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  padding: 8px 17px 8px 8px;
+  border: none;
+  border-radius: 4px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  background-color: #ffffff;
+  box-shadow: 0px 1px 2px #b9b8b8;
+  color: #505050;
+  outline: none;
+  resize: none;
+}
+
+.form-add-task__text:focus {
+  outline: 1px solid #94f55c;
+}
+
+.form-add-task__add-btn {
+  width: 33%;
+  height: 35px;
+  margin-top: 8px;
+  border: none;
+  border-radius: 3px;
+  font-size: 14px;
+  font-weight: 600;
+  background-color: #5CA84D;
+  color: #ffffff;
+  box-shadow: 0px 1px 2px #b9b8b8;
+}
+
+.form-add-task__add-btn:hover {
+  background-color: #3c8b2d;
+}
+
+.form-add-task__add-btn:active {
+  background-color: #94f55c;
+}
+
+.form-add-task__cancel-btn {
+  display: inline-block;
+  margin-left: 8px;
+  font-size: 30px;
+  line-height: 0;
+  vertical-align: middle;
+  color: #868686;
+  cursor: pointer;
+}
+
+.form-add-task__cancel-btn:hover {
+  color: #3b3b3b;
+}
