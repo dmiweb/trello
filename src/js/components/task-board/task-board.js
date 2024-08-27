@@ -165,14 +165,14 @@ export default class TaskBoard {
   reloadTaskList() {
     this.taskBuffer = this.restoreSaveTasks();
 
+    const taskListElements = document.querySelectorAll(TaskBoard.taskListSelector); 
+
     if (!this.taskBuffer) this.taskBuffer = [];
     if (!this.taskBuffer.length) {
-      this.taskListElements.forEach((list) =>
-        list.insertAdjacentHTML(
-          "beforeEnd",
-          '<span class="no-tasks-message">No cards</span>'
-        )
-      );
+      this.taskListElements.forEach(list => {
+        list.innerHTML = '<li class="no-tasks-message">No cards</li>';
+      });
+
       return;
     }
 
@@ -190,6 +190,12 @@ export default class TaskBoard {
           list.insertAdjacentHTML("beforeEnd", taskElement);
         }
       });
+    });
+
+    document.querySelectorAll(TaskBoard.taskListSelector).forEach(list => {
+      if(!list.children[0]) {
+        list.innerHTML = '<li class="no-tasks-message">No cards</li>';
+       }
     });
   }
 
