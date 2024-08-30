@@ -165,8 +165,6 @@ export default class TaskBoard {
   reloadTaskList() {
     this.taskBuffer = this.restoreSaveTasks();
 
-    const taskListElements = document.querySelectorAll(TaskBoard.taskListSelector); 
-
     if (!this.taskBuffer) this.taskBuffer = [];
     if (!this.taskBuffer.length) {
       this.taskListElements.forEach(list => {
